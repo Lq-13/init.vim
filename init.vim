@@ -96,7 +96,7 @@ set exrc
 set secure
 set clipboard=unnamed
 set number
-set spell
+"set spell
 set relativenumber
 set cursorline
 set hidden
