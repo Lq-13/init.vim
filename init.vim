@@ -7,6 +7,7 @@ nnoremap L $
 
 nnoremap W 5w
 nnoremap B 5b
+nnoremap dL d$
 
 nnoremap Q :q<CR>
 nnoremap S :w<CR>
@@ -165,8 +166,9 @@ Plug 'kdheepak/lazygit.vim', { 'branch': 'nvim-v0.4.3' }
 
 call plug#end()
 
-"let g:airline_theme='deus'
-let g:airline_theme='dracula'
+" ===
+" === Theme
+" ===
 set t_Co=256
 set termguicolors
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -180,8 +182,19 @@ let g:deus_termcolors=256
 hi Normal ctermfg=252 ctermbg=none
 highlight Normal guibg=NONE ctermbg=None
 
+" ===
+" === Airline
+" ===
+set laststatus=2
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled = 1
+"let g:airline_theme='deus'
+let g:airline_theme='dracula'
 
-"rainbow
+
+" ===
+" === Rainbow
+" ===
 let g:rainbow_active = 1
 let g:rainbow_conf = {
 \   'guifgs': ['#FFE66F', '#00FFFF', '#46A3FF', '#AAAAFF', '#FFB5B5'],
@@ -190,7 +203,11 @@ let g:rainbow_conf = {
 \   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
 \}
 
-"EasyMotion
+
+
+" ===
+" === EasyMotion
+" ===
 let g:EasyMotion_smartcase = 1
 nmap s <Plug>(easymotion-overwin-f)
 
